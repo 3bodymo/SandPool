@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gradient-bg {
+  background-color: #151c25;
+  background-image: hsl(258, 29%, 27%);
+}
+
+.gradient-bg-transactions {
+  background-color: #151c25;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsl(258, 29%, 27%) 0,
+      transparent 0%
+    ),
+    radial-gradient(at 50% 0%, hsl(140, 39%, 30%) 0, transparent 0%),
+    radial-gradient(at 100% 0%, hsla(140, 39%, 30%, 1) 0, transparent 0%);
+}
+
+.gradient-bg-hero {
+  background-color: #151c25;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsl(258, 29%, 27%) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsl(140, 39%, 30%) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(140, 39%, 30%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-artworks {
+  background-color: #151c25;
+  background-image: radial-gradient(
+      at 50% 50%,
+      hsl(258, 29%, 27%) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 50%, hsla(140, 29%, 20%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-footer {
+  background-color: #151c25;
+  background: -webkit-linear-gradient(#151c25, hsl(258, 29%, 27%));
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* For NFT card */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--colour-blue);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+:root {
+  --bg-main: hsl(217, 54%, 11%);
+  --bg-card: hsl(216, 50%, 16%);
+  --colour-blue: hsl(215, 51%, 70%);
+  --colour-cyan: hsl(178, 100%, 50%);
+  --colour-white: hsl(0, 0%, 100%);
+  --line-colour: hsl(215, 32%, 27%);
+}
+
+.main-card {
+  background-color: var(--bg-card);
+  width: min(100%, 21rem);
+  margin: 1.5rem auto;
+  border-radius: 15px;
+  padding: 1.5rem 1.6rem 2rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+/* Main Image */
+.image-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.main-image {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: var(--colour-cyan);
+  border-radius: 10px;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+.image-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.image-container:hover .overlay + .view {
+  display: block;
+}
+
+/* Main Content */
+.title {
+  color: var(--colour-white);
+  margin: 1.4rem 0 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 550;
+}
+
+.description {
+  font-size: 1.1rem;
+  letter-spacing: 0.015em;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.eth-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1.4rem;
+}
+
+.eth-info-user-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 0;
+}
+
+.eth {
+  color: var(--colour-cyan);
+  font-weight: 600;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+/* Creator Info */
+.creator-info {
+  display: flex;
+  border-top: 1px solid var(--line-colour);
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 2rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.creator-text {
+  font-weight: 300;
+}
+
+.creator-name {
+  color: var(--colour-white);
+}
+
+.title:hover,
+.creator-name:hover {
+  color: var(--colour-cyan);
+  cursor: pointer;
+}
+
+/* Footer Section */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--colour-white);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--colour-cyan);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
