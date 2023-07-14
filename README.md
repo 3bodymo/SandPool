@@ -17,8 +17,16 @@ yarn global add ganache-cli
 
 ## Getting Started
 
+Before getting started, don't forget to add your `.env` file to the root directory with the following details:
 ```shell
-ganache-cli -d --db /path -i 4447
+REACT_APP_INFURIA_PID=<INFURIA_API_KEY_HERE>
+REACT_APP_INFURIA_API=<INFURIA_API_KEY_SECRET_HERE>
+```
+
+Now, you are ready to run:
+```shell
+ganache-cli
+truffle migrate --reset
 yarn start
 ```
 
